@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>ordercoresoa</artifactId>
+        <groupId>com.jd.app.server.ordercoresoa</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jd.app.server.ordercoresoa</groupId>
+    <artifactId>core-web</artifactId>
+    <packaging>war</packaging>
+    <name>core-web Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jd.app.server.ordercoresoa</groupId>
+            <artifactId>core-service</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jd.app.server.ordercoresoa</groupId>
+            <artifactId>core-rpc</artifactId>
+            <version>1.0</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-simple</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.jd.app.server.ordercoresoa</groupId>
+            <artifactId>core-domain</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jd.app.server.ordercoresoa</groupId>
+            <artifactId>core-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jd.app.server.ordercoresoa</groupId>
+            <artifactId>core-interface</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>core-web</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <!-- 开发环境 -->
+        <profile>
+            <id>test</id>
+            <properties>
+                <config.fileName>config-test.properties</config.fileName>
+                <config.myOrder.fileName>config-order-test.properties</config.myOrder.fileName>
+                <order.soa.core.log.level.main>INFO</order.soa.core.log.level.main>
+                <order.soa.core.log.level.root>INFO</order.soa.core.log.level.root>
+                <!--归属环境：0-测试环境;1-开发环境;2-预发环境;3-生产环境-->
+                <ordersoa.config.evn>0</ordersoa.config.evn>
+            </properties>
+        </profile>
+        <!-- 预发布环境 -->
+        <profile>
+            <id>beta</id>
+            <properties>
+                <config.fileName>config-beta.properties</config.fileName>
+                <config.myOrder.fileName>config-order-beta.properties</config.myOrder.fileName>
+                <order.soa.core.log.level.main>INFO</order.soa.core.log.level.main>
+                <order.soa.core.log.level.root>INFO</order.soa.core.log.level.root>
+                <!--归属环境：0-测试环境;1-开发环境;2-预发环境;3-生产环境-->
+                <ordersoa.config.evn>2</ordersoa.config.evn>
+            </properties>
+        </profile>
+        <!-- 线上环境 -->
+        <profile>
+            <id>production</id>
+            <properties>
+                <config.fileName>config-production.properties</config.fileName>
+                <config.myOrder.fileName>config-order-production.properties</config.myOrder.fileName>
+                <order.soa.core.log.level.main>INFO</order.soa.core.log.level.main>
+                <order.soa.core.log.level.root>ERROR</order.soa.core.log.level.root>
+                <!--归属环境：0-测试环境;1-开发环境;2-预发环境;3-生产环境-->
+                <ordersoa.config.evn>3</ordersoa.config.evn>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>
