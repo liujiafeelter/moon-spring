@@ -8,4 +8,12 @@
 
     <mvc:annotation-driven />
 
+    <mvc:interceptors>
+        <!--<mvc:interceptor>
+            <mvc:mapping path=""/>
+            <bean></bean>
+        </mvc:interceptor>-->
+        <bean id="logInterceptor" class="com.moon.spring.test.interceptor.LogInterceptor" />
+    </mvc:interceptors>
+
 </beans>
