@@ -16,4 +16,6 @@
         <bean id="logInterceptor" class="com.moon.spring.test.interceptor.LogInterceptor" />
     </mvc:interceptors>
 
+    <mvc:resources mapping="/resources/js/**" location="/resources/js/" />
+
 </beans>
