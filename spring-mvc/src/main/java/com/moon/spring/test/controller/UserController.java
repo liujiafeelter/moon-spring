@@ -23,5 +23,10 @@ public class UserController {
         return new Response(1, "成功", "数据");
     }
 
+    @RequestMapping(value = "/testHtml")
+    public String goHome() {
+        return "/resources/html/test";
+    }
+
 
 }
