@@ -1,5 +1,0 @@
-
-function alertTest(){
-    alert("nihao");
-}
-

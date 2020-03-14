@@ -13,7 +13,7 @@
             <mvc:mapping path=""/>
             <bean></bean>
         </mvc:interceptor>-->
-        <bean id="logInterceptor" class="com.moon.spring.test.interceptor.LogInterceptor" />
+        <bean id="logInterceptor" class="com.moon.store.interceptor.LogInterceptor" />
     </mvc:interceptors>
 
     <mvc:resources mapping="/resources/**" location="/resources/" />

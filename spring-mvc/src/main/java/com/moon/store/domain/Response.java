@@ -1,4 +1,4 @@
-package com.moon.spring.test.domain;
+package com.moon.store.domain;
 
 public class Response {
 

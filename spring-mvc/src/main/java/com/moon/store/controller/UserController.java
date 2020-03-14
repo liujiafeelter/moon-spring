@@ -1,7 +1,7 @@
-package com.moon.spring.test.controller;
+package com.moon.store.controller;
 
+import com.moon.store.domain.Response;
 import org.springframework.stereotype.Controller;
-import com.moon.spring.test.domain.Response;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
