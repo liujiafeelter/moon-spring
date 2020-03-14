@@ -3,18 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.moon.spring.test</groupId>
+    <groupId>com.moon.store</groupId>
     <artifactId>moon-spring</artifactId>
     <version>1.0.0</version>
 
-    <modules>
-        <module>spring-test</module>
-        <module>spring-mvc</module>
-        <module>spring-mybatis</module>
-    </modules>
-
     <name>moon-spring</name>
-    <packaging>pom</packaging>
+    <packaging>war</packaging>
 
     <properties>
         <spring.version>4.1.7.RELEASE</spring.version>
@@ -60,6 +54,16 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
             <version>${spring.version}</version>
         </dependency>
 
