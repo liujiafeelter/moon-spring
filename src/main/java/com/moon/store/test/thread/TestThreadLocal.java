@@ -1,6 +1,4 @@
-package com.moon.store.thread;
-
-import java.util.Random;
+package com.moon.store.test.thread;
 
 public class TestThreadLocal {
 

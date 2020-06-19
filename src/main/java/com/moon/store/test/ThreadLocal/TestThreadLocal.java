@@ -1,4 +1,4 @@
-package com.moon.store.test;
+package com.moon.store.test.ThreadLocal;
 
 import java.util.HashMap;
 import java.util.Map;

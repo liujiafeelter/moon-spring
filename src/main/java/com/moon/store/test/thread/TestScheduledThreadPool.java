@@ -1,4 +1,4 @@
-package com.moon.store.thread;
+package com.moon.store.test.thread;
 
 import java.util.concurrent.*;
 
