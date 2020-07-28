@@ -1,3 +1,4 @@
+/*
 package com.moon.store.test;
 
 import org.openjdk.jol.info.ClassLayout;
@@ -71,4 +72,4 @@ public class TestSycroniazed {
 }
 class A{
     int a;
-}
+}*/

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestRateLimiter {
 
-    static RateLimiter rateLimiter = RateLimiter.create(2.0);
+    static RateLimiter rateLimiter = RateLimiter.create(1.0);
     static ThreadPoolExecutor executor = new ThreadPoolExecutor(50, 100,
             100, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>());
 
@@ -38,7 +38,7 @@ class Task implements Runnable{
     public void run() {
         System.out.println("Task:" + i);
         try {
-            Thread.sleep(10000);
+            //Thread.sleep(10000);
         }catch (Exception e){
         }
     }
