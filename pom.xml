@@ -136,7 +136,6 @@
                     <stopPort>9090</stopPort>
                     <webAppSourceDirectory>src/main/webapp</webAppSourceDirectory>
                     <scanIntervalSeconds>1</scanIntervalSeconds>
-                    
                     <httpConnector>
                         <port>80</port>
                     </httpConnector>
