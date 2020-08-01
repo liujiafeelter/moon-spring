@@ -1,4 +1,4 @@
-package com.moon.store.test.scoket;
+package com.moon.store.test.socket;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
