@@ -1,10 +1,8 @@
-package com.moon.store.kafka;
+package com.moon.store.test.kafka;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
-import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
 
@@ -26,26 +24,26 @@ public class product {
     /**
      * 1.发送并忘记
      */
-    public static void send1() {
-        ProducerRecord record = new ProducerRecord<String, String>("topic-order1", "userName", "yueliang");
+    public static void send1(int i) {
+        ProducerRecord record = new ProducerRecord<String, String>("topic-order1", "userName", "yueliang" + i);
         producer.send(record);
-        producer.flush();
         System.out.println("result:" + record.toString());
     }
 
     /**
      * 2.同步发送
      */
-    public static void send2() throws Exception{
-        ProducerRecord record = new ProducerRecord<String, String>("test", "userName2", "yueliang");
+    public static void send2(int i) throws Exception{
+        ProducerRecord record = new ProducerRecord<String, String>("test", "userName2", "yueliang" + i);
         RecordMetadata result = (RecordMetadata) producer.send(record).get();
         System.out.println("result:" + record.toString());
     }
 
     public static void main(String[] args) throws Exception{
-        for(int i=0; i<100; i++){
-            send1();
+        for(int i=0; i<2; i++){
+            send1(i);
         }
+        producer.flush();
         producer.close();
     }
 

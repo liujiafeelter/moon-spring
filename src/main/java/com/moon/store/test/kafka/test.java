@@ -1,4 +1,4 @@
-package com.moon.store.kafka;
+package com.moon.store.test.kafka;
 
 public class test {
 
