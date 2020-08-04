@@ -12,10 +12,10 @@ import java.util.Iterator;
 /**
  * https://blog.csdn.net/u013857458/article/details/82424104
  */
-public class NIOServer {
+public class NIOServer3 {
 
     public static void main(String[] args) throws IOException{
-        NIOServer NIOServer = new NIOServer();
+        NIOServer3 NIOServer = new NIOServer3();
         NIOServer.run();
     }
 
