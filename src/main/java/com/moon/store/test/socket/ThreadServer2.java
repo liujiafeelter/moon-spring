@@ -9,7 +9,7 @@ import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ThreadServer {
+public class ThreadServer2 {
 
     public static void main(String[] args) throws IOException {
         ExecutorService executorService = Executors.newFixedThreadPool(10);

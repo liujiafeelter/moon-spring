@@ -9,10 +9,10 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 import java.io.UnsupportedEncodingException;
 
-public class NettyServer {
+public class NettyServer4 {
 
     public static void main(String[] args)throws Exception {
-        NettyServer server = new NettyServer();
+        NettyServer4 server = new NettyServer4();
         server.start();
     }
 

@@ -6,7 +6,6 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-
     }
 
     public List<String> findSimilarImage(String targetImage, List<String> imageList){
