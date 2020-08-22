@@ -1,4 +1,4 @@
-package com.moon.store.test.other;
+package com.moon.store.test.designpattern.singleton;
 
 /**
  * 1、double check 双重校验
