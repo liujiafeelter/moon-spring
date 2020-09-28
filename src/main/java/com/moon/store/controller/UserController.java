@@ -21,7 +21,8 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/add")
     public int add(User user){
-        return userService.add(user);
+        return 1;
+        //return userService.add(user);
     }
 
     @ResponseBody
@@ -42,7 +43,8 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/getById")
     public User getById(int id){
-        return userService.getById(id);
+        return null;
+        //return userService.getById(id);
     }
 
 
@@ -60,5 +62,10 @@ public class UserController {
         return "/resources/html/test";
     }
 
+    @ResponseBody
+    @RequestMapping("/testString")
+    public String testString(){
+        return "nihao";
+    }
 
 }

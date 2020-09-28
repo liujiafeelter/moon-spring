@@ -17,20 +17,20 @@ public class NettyServer4 {
     }
 
     public void start() throws Exception{
-        EventLoopGroup parentGroup = new NioEventLoopGroup();//负责处理TCP/IP连接
-        EventLoopGroup childGroup = new NioEventLoopGroup();//负责处理Channel（通道）的I/O事件
+        EventLoopGroup bossGroup = new NioEventLoopGroup();//负责处理TCP/IP连接
+        EventLoopGroup workGroup = new NioEventLoopGroup();//负责处理Channel（通道）的I/O事件
 
         ServerBootstrap server = new ServerBootstrap();
-        server.group(parentGroup, childGroup);
+        server.group(bossGroup, workGroup);
         server.channel(NioServerSocketChannel.class);
-        server.localAddress(8080);
         server.childHandler(new ChannelInitializer<SocketChannel>() {
             @Override
             protected void initChannel(SocketChannel ch) throws Exception {
                 ch.pipeline().addLast(new MyServerHandler());
             }
         });
-        ChannelFuture f = server.bind().sync();
+
+        ChannelFuture f = server.bind(8080).sync();
         f.channel().closeFuture().sync();
     }
 

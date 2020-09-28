@@ -8,13 +8,13 @@
 
     <mvc:annotation-driven />
 
-    <mvc:interceptors>
-        <!--<mvc:interceptor>
+    <!--<mvc:interceptors>
+        &lt;!&ndash;<mvc:interceptor>
             <mvc:mapping path=""/>
             <bean></bean>
-        </mvc:interceptor>-->
-        <bean id="logInterceptor" class="com.moon.store.interceptor.LogInterceptor" />
-    </mvc:interceptors>
+        </mvc:interceptor>&ndash;&gt;
+        &lt;!&ndash;<bean id="logInterceptor" class="com.moon.store.interceptor.LogInterceptor" />&ndash;&gt;
+    </mvc:interceptors>-->
 
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
