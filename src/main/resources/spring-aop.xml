@@ -6,15 +6,18 @@
     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <aop:config>
+   <!--1、配置方式-->
+   <!-- <aop:config>
         <aop:pointcut id="getMethodsPointcut" expression="execution(* com.moon..*.*(..))" />
-        <!--<aop:pointcut id="addMethodsPointcut" expression="execution(* com.moon.controller.UserContorller.add*(..))" />-->
+        &lt;!&ndash;<aop:pointcut id="addMethodsPointcut" expression="execution(* com.moon.controller.UserContorller.add*(..))" />&ndash;&gt;
         <aop:aspect ref="logAopAspect" order="0">
-            <!--<aop:before method="before" pointcut-ref="getMethodsPointcut"></aop:before>-->
+            &lt;!&ndash;<aop:before method="before" pointcut-ref="getMethodsPointcut"></aop:before>&ndash;&gt;
             <aop:around method="around" pointcut-ref="getMethodsPointcut"/>
-            <!--<aop:after method="after" pointcut-ref="getMethodsPointcut"></aop:after>-->
+            &lt;!&ndash;<aop:after method="after" pointcut-ref="getMethodsPointcut"></aop:after>&ndash;&gt;
         </aop:aspect>
-    </aop:config>
+    </aop:config>-->
 
+    <!--2、注解方式-->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
 </beans>
