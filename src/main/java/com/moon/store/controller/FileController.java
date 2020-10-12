@@ -23,8 +23,10 @@ public class FileController {
 
     @ResponseBody
     @RequestMapping("/upload")
-    public Object upload(@RequestParam("file") CommonsMultipartFile file){
+    public Object upload(@RequestParam("file") CommonsMultipartFile file, @RequestParam("id") String id){
         System.out.println("上传图片：" + file.getName());
+        System.out.println("上传图片id：" + id);
+
         String filePath = "C:\\Users\\liujia54\\Desktop\\图片\\";
         String fileName = "aaa.jpg";
         File dest = new File(filePath + fileName);
