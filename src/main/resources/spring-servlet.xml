@@ -16,8 +16,10 @@
         &lt;!&ndash;<bean id="logInterceptor" class="com.moon.store.interceptor.LogInterceptor" />&ndash;&gt;
     </mvc:interceptors>-->
 
+    <!--http://localhost:8080/resources/html/test.html-->
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
+    <!--文件上传-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="104857600" />
         <property name="maxInMemorySize" value="4096" />
