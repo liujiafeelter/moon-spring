@@ -96,7 +96,7 @@ public class ImageUtils {
     }
 
     public static void main(String[] args) throws IOException {
-        pressText("aaabbb.jpg", "58.com 房本审核专用", "宋体",
+        pressText("aaabbb.jpg", "审核专用", "宋体",
                 Font.BOLD | Font.ITALIC, 120, Color.RED, -1, -1, 0.62f);
         System.out.println("给图片添加水印文字结束...");
     }
