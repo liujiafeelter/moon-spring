@@ -15,14 +15,12 @@ public class LogAopAspect2 {
 
     @Around("pointCut()")
     public Object around(ProceedingJoinPoint joinPoint) {
-        System.out.println("around2 start");
         Object result = null;
         try {
             result = joinPoint.proceed(joinPoint.getArgs());
         }catch (Throwable throwable) {
             throwable.printStackTrace();
         }
-        System.out.println("around2 end");
         return result;
     }
 
