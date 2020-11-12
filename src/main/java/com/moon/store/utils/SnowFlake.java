@@ -1,5 +1,9 @@
 package com.moon.store.utils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.UUID;
+
 /**
  * 雪花算法
  */
@@ -15,7 +19,7 @@ public class SnowFlake {
      */
     private long workerIdBits = 5L;     //5位的机器id
     private long datacenterIdBits = 5L; //5位的机房id
-    private long sequenceBits = 12L;    //每毫秒内产生的id数 2 的 12次方
+    private long sequenceBits = 12L;    //12位的序列号
 
     /**
      * 每一部分的最大值
@@ -100,13 +104,28 @@ public class SnowFlake {
         return System.currentTimeMillis();
     }
 
+    /**
+     * 获取id的创建时间
+     * @param id
+     * @return
+     */
+    public String idCreateTime(long id){
+        String idBit = Long.toBinaryString(id);
+        int timeLength = idBit.length() - (int)timestampLeftShift;
+        String timeBit = idBit.substring(0, timeLength);
+        long time = Long.parseUnsignedLong(timeBit, 2);
+
+        long createTime = time + twepoch;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return sdf.format(new Date(createTime));
+    }
+
 
     public static void main(String[] args) {
-        /*SnowFlake snowFlake = new SnowFlake(1, 1);
-        for(int i=0; i<100; i++){
-            System.out.println(snowFlake.nextId());
-        }*/
-        System.out.println(System.currentTimeMillis());
+        SnowFlake snowFlake = new SnowFlake(1, 1);
+        long id = snowFlake.nextId();
+        System.out.println(id);
+        System.out.println(snowFlake.idCreateTime(id));
     }
 
 
