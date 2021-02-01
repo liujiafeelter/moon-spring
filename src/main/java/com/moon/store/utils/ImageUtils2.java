@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class ImageUtils {
+public class ImageUtils2 {
 
     private static final String PICTRUE_FORMATE_JPG = "jpg";
 
@@ -25,6 +25,7 @@ public class ImageUtils {
     public static void pressText(String targetImg, String pressText, String fontName, int fontStyle, int fontSize, Color color, int x, int y, float alpha) {
         try {
             File file = new File(targetImg);
+
             Image image = ImageIO.read(file);
             int width = image.getWidth(null);
             int height = image.getHeight(null);
@@ -34,7 +35,7 @@ public class ImageUtils {
             g.setFont(new Font(fontName, fontStyle, fontSize));
 
             //倾斜水印开始,图片也是倾斜的
-            g.rotate(Math.toRadians(-45),
+            g.rotate(Math.toRadians(-0),//(-45)
                     (double) bufferedImage.getWidth() / 2,
                     (double) bufferedImage.getHeight() / 2);
             //倾斜水印结束
@@ -56,14 +57,11 @@ public class ImageUtils {
             }else if(y > heightDiff){
                 y = heightDiff;
             }
-
-            //   g.drawString(pressText, x, y + height_1);
-            g.drawString(pressText, (int) (x*1.5), (y + height_1)/3);
+            g.drawString(pressText, x/6*11, heightDiff);
+            //     g.drawString(pressText, (int) (x*1.5), (y + height_1)/3);
             //           g.drawString(pressText, (int) (x*1.5), (y + height_1)/2);
             //      g.drawString(pressText, (int) (x*1.5), (int) ((y + height_1)*1.5));
             //     g.drawString(pressText, x/2, (int) ((y + height_1)*1.5));
-
-
             g.dispose();
             ImageIO.write(bufferedImage, PICTRUE_FORMATE_JPG, file);
         } catch (Exception e) {
