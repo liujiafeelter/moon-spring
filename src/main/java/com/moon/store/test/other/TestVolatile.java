@@ -1,5 +1,8 @@
 package com.moon.store.test.other;
 
+/**
+ * 线程可见性
+ */
 public class TestVolatile {
     volatile boolean running = true;
 
