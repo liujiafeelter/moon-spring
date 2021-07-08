@@ -5,9 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>后台管理系统模板</title>
 <link rel="icon" href="favicon.ico" type="image/ico">
-<link href="css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.0.45/css/materialdesignicons.min.css"/>
-<link href="css/style.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.min.css"/>
+<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"/>
+<link rel="stylesheet" href="css/bootstrap-datepicker3.min.css"/>
 </head>
 <body>
 <div class="lyear-layout-web">
@@ -66,7 +68,7 @@
             <li class="nav-item nav-item-has-subnav">
               <a href="javascript:void(0)"><i class="mdi mdi-language-javascript"></i> JS 插件</a>
               <ul class="nav nav-subnav">
-                <li> <a href="lyear_js_datepicker.html">日期选取器</a> </li>
+                <li> <a href="javascript:void(0);" onclick="loadHtml('lyear_js_datepicker.html')">日期选取器</a> </li>
                 <li> <a href="lyear_js_sliders.html">滑块</a> </li>
                 <li> <a href="lyear_js_colorpicker.html">选色器</a> </li>
                 <li> <a href="lyear_js_chartjs.html">Chart.js</a> </li>
@@ -489,6 +491,13 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/perfect-scrollbar.min.js"></script>
 <script type="text/javascript" src="js/main.min.js"></script>
+<!--时间选择插件-->
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/zh-cn.js"></script>
+<!--日期选择插件-->
+<script src="js/bootstrap-datepicker.min.js"></script>
+<script src="js/bootstrap-datepicker.zh-CN.min.js"></script>
 
 <!--图表插件-->
 <script type="text/javascript" src="js/Chart.js"></script>

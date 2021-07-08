@@ -1,16 +1,13 @@
 package com.moon.store.test.thread;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class TestThreadPoolExecutor {
 
     public static void main(String[] args) {
 
         ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS,
-                new ArrayBlockingQueue<Runnable>(5), new ThreadFactory(){
+                new LinkedBlockingDeque<Runnable>(5), new ThreadFactory(){
             @Override
             public Thread newThread(Runnable r) {
                 Thread newThr = new Thread(r);
@@ -19,8 +16,11 @@ public class TestThreadPoolExecutor {
             }
         });
 
-        for (int i=1; i<=12; i++){
+        for (int i=1; i<=18; i++){
             executor.execute(new Task(i));
+            try {
+                Thread.sleep(10);
+            }catch (Exception e){}
         }
     }
 
