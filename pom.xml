@@ -76,7 +76,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.12</version>
+            <version>8.0.16</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -101,7 +101,7 @@
             <version>0.3.6</version>
         </dependency>
 
-        <!--打印对象头-->
+        <!--麓貌脫隆露脭脧贸脥路-->
         <dependency>
             <groupId>org.openjdk.jol</groupId>
             <artifactId>jol-core</artifactId>
