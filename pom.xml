@@ -11,7 +11,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <spring.version>4.1.7.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
     </properties>
 
     <dependencies>
@@ -101,7 +101,7 @@
             <version>0.3.6</version>
         </dependency>
 
-        <!--´òÓ¡¶ÔÏóÍ·-->
+        <!--æ‰“å°å¯¹è±¡å¤´-->
         <dependency>
             <groupId>org.openjdk.jol</groupId>
             <artifactId>jol-core</artifactId>
@@ -190,11 +190,11 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <!--¶Ë¿Ú¿ØÖÆ-->
+                    <!--ç«¯å£æŽ§åˆ¶-->
                     <port>8080</port>
-                    <!--ÏîÄ¿Â·¾¶¿ØÖÆÒâÎ¶×Åhttp://localhost:8080/abc-->
+                    <!--é¡¹ç›®è·¯å¾„æŽ§åˆ¶æ„å‘³ç€http://localhost:8080/abc-->
                     <path>/</path>
-                    <!--±àÂë-->
+                    <!--ç¼–ç -->
                     <uriEncoding>UTF-8</uriEncoding>
                 </configuration>
             </plugin>
