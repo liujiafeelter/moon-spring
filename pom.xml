@@ -76,7 +76,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.12</version>
+            <version>8.0.28</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -101,7 +101,7 @@
             <version>0.3.6</version>
         </dependency>
 
-        <!--´òÓ¡¶ÔÏóÍ·-->
+        <!--æ‰“å°å¯¹è±¡å¤´-->
         <dependency>
             <groupId>org.openjdk.jol</groupId>
             <artifactId>jol-core</artifactId>
@@ -190,11 +190,11 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <!--¶Ë¿Ú¿ØÖÆ-->
+                    <!--ç«¯å£æŽ§åˆ¶-->
                     <port>8080</port>
-                    <!--ÏîÄ¿Â·¾¶¿ØÖÆÒâÎ¶×Åhttp://localhost:8080/abc-->
+                    <!--é¡¹ç›®è·¯å¾„æŽ§åˆ¶æ„å‘³ç€http://localhost:8080/abc-->
                     <path>/</path>
-                    <!--±àÂë-->
+                    <!--ç¼–ç -->
                     <uriEncoding>UTF-8</uriEncoding>
                 </configuration>
             </plugin>
